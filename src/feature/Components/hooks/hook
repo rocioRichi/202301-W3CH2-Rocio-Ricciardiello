@@ -1,0 +1,23 @@
+export function usePhone() {
+  const phone = useSelector((state: RootState) => state.phone);
+  const dispatch = useDispatch<AppDispatch>();
+
+  const inputNumber = (num: string) => {
+    dispatch(ac.inputCreator(num));
+  };
+
+  const phoneCall = () => {
+    dispatch(ac.callCreator());
+  };
+
+  const deleteNumber = () => {
+    dispatch(ac.deleteCreator());
+  };
+
+  return {
+    phone,
+    phoneCall,
+    inputNumber,
+    deleteNumber,
+  };
+}
