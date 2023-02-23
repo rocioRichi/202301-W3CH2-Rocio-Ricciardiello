@@ -1,4 +1,4 @@
-function Keyboard() {
+export function Keyboard() {
   const keys: string[] = [
     "0",
     "1",
@@ -23,5 +23,3 @@ function Keyboard() {
     </div>
   );
 }
-
-export default Keyboard;
